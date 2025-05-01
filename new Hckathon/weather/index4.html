@@ -1,0 +1,77 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Crop Suggestion System 🌾</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title"><i class="fas fa-seedling"></i> Smart Crop Suggestion System</h1>
+        <div id="main-menu">
+            <div class="form-group">
+                <label for="district">🌍 Select District:</label>
+                <select id="district">
+                    <option value="">-- Choose District --</option>
+                    <option value="Dehradun">Dehradun</option>
+                    <option value="Tehri">Tehri Garhwal</option>
+                    <option value="Nainital">Nainital</option>
+                    <option value="Pithoragarh">Pithoragarh</option>
+                    <option value="Udham-Singh-Nagar">Udham Singh Nagar</option>
+                    <option value="Champawat">Champawat</option>
+                    <option value="Almora">Almora</option>
+                    <option value="Pithoragarh">Chamoli</option>
+                    <option value="Uttarkashi">Uttarkashi</option>
+                    <option value="Bageshwar">Bageshwar</option>
+                    <option value="Haridwar">Haridwar</option>
+                    <option value="Pauri">Pauri Garhwal</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="soil">🧱 Select Soil Type:</label>
+                <select id="soil">
+                    <option value="">-- Choose Soil Type --</option>
+                    <option value="Clay">Clay</option>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Loamy">Loamy</option>
+                    <option value="Black">Black</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        
+            <button class="btn" onclick="getWeather()">🌤️ Get Weather & Suggest Crops</button>
+        </div>
+        
+        <div id="profile" class="hidden fade-in">
+            <h2>📍 Location: <span id="location"></span></h2>
+            <h3>🌡️ Temperature: <span id="temperature"></span>°C</h3>
+            <h3>🌦️ Weather: <span id="weather"></span></h3>
+            <h3>🍂 Season: <span id="season"></span></h3>
+
+            <h3>🌱 Suggested Crops:</h3>
+            <ul id="crops-list"></ul>
+
+            <h3>🗓️ 7-Day Weather Forecast:</h3>
+            <ul id="forecast-list"></ul>
+
+            <h3>📌 Farming Tips:</h3>
+            <ul id="tips-list"></ul>
+
+            <h3>🧾 Farming Calendar:</h3>
+            <div id="calendar"></div>
+
+            <button class="btn-secondary" onclick="returnToMainMenu()">🔙 Return to Main Menu</button>
+        </div>
+    </div>
+
+    <script src="script5.js"></script>
+</body>
+</html>
